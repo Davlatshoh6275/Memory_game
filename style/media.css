@@ -1,4 +1,9 @@
 @media screen and (max-width: 375px) {
+
+    body {
+        padding: 6% 0;
+    }
+
     .conteiner {
         justify-content: space-between;
         align-items: center;
