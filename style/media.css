@@ -23,6 +23,11 @@
         padding: 6% 0;
     }
 
+    .card {
+        width: 112px;
+        margin: 5px;
+    }
+
     .conteiner {
         justify-content: space-between;
         align-items: center;
