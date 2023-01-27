@@ -1,0 +1,9 @@
+@media screen and (max-width: 375px) {
+    .conteiner {
+        justify-content: space-between;
+        align-items: center;
+        width: 375px;
+        height: 100%;
+        padding: 1%;
+    }
+}
