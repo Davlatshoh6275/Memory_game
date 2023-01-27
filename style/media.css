@@ -31,3 +31,18 @@
         padding: 1%;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .conteiner {
+        justify-content: space-between;
+        align-items: center;
+        width: 320px;
+        height: 100%;
+        padding: 1%;
+    }
+
+    .card {
+        width: 93px;
+        margin: 5px;
+    }
+}  
