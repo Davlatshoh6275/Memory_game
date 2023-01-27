@@ -31,22 +31,31 @@ for (let i = 0; i < cards_lngth; i++) {
         </div>
     `;
 
+  card_elm.onclick = () => {
+    if (!card_elm.classList.contains("show")) {
+      card_elm.classList.add("show");
+    }
+
+    if (!previous_shown_card) {
+      previous_shown_card = card_elm;
+    } else {
+      const icon_one = previous_shown_card.querySelector("i").classList[1];
+
+      const icon_two = card_elm.querySelector("i").classList[1];
+
+      if (icon_one !== icon_two) {
+        const temp = previous_shown_card;
+        setTimeout(() => {
+          temp.classList.remove("show");
+          card_elm.classList.remove("show");
+        }, 1000);
+      }
+
+      previous_shown_card = undefined;
+    }
+  };
+
   cards.push(card_elm);
 
   conteiner_elm.appendChild(card_elm);
-}
-
-{
-  /* <i class='bx bx-home'></i> */
-}
-{
-  /* <i class='bx bxs-castle'></i> */
-}
-{
-  /* <i class='bx bx-palette'></i>
-<i class='bx bxl-visual-studio'></i>
-<i class='bx bxl-github'></i>
-<i class='bx bxl-apple'></i>
-<i class='bx bxl-codepen'></i>
-<i class='bx bxl-git'></i> */
 }
