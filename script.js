@@ -18,6 +18,16 @@ let icons = [
 // copy the icons again (doubl them)
 icons.push(...icons);
 
+for(let i = 0; i < 100; i++) {
+    const ind1 = Math.floor(Math.random() * icons.length);
+    const ind2 = Math.floor(Math.random() * icons.length);
+
+    const temp = icons[ind1]
+    icons[ind1] = icons[ind2]
+    icons[ind2] = temp
+}
+
+
 for (let i = 0; i < cards_lngth; i++) {
   const card_elm = document.createElement("div");
   card_elm.classList.add("card");
